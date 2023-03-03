@@ -1,0 +1,133 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.carre{
+    position: relative;
+    width: 60rem;
+    height: 30rem;
+    background: black;
+    background-size: cover;
+    margin: 10rem auto;
+    animation-name: changement_color;
+    animation-duration: 12s;
+    animation-iteration-count: infinite;
+    transition: .3s ease-in-out;
+}
+
+
+.cercle1{
+    position: absolute;
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    background: crimson;
+    animation-name: position1;
+    animation-duration: 12s;
+    animation-iteration-count: infinite;
+}
+
+.cercle2{
+    position: absolute;
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    background: crimson;
+    animation-name: position2;
+    animation-duration: 12s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes changement_color {
+    0%{
+        background:url(naruto.png);
+        background-size: cover;
+        background-position: center;
+        border: solid .6rem green;
+    }
+    25%{
+        background:url(ichigo.png);
+        background-size: cover;
+        border: solid .6rem rgb(251, 255, 0);
+    }
+    50%{
+        background:url(luffy.jpg);
+        background-size: cover;
+        border: solid .6rem rgb(20, 37, 190);
+    }
+    75%{
+        background:url(goku.jpg);
+        background-size: cover;
+        border: solid .6rem violet;
+    }
+  
+
+
+}
+
+@keyframes position1 {
+    0%{
+        left: -15%;
+        top: -15%;
+        background: green;
+    }
+
+    25%{
+        left: 90%;
+        top: -15%;
+        background: yellow;
+        
+    }
+
+    50%{
+        left: 90%;
+        top: 80%;
+        background: blue;
+    }
+
+    75%{
+        left: -6%;
+        top: 80%;
+        background: violet;
+    }
+
+    100%{
+        left: -6%;
+        top: -15%;
+        background: grey;
+    }
+}
+
+@keyframes position2{
+    0%{
+        right: -15%;
+        bottom: -15%;
+        background: green;
+    }
+
+    25%{
+        right: 90%;
+        bottom: -15%;
+        background: yellow;
+        
+    }
+
+    50%{
+        right: 90%;
+        bottom: 80%;
+        background: blue;
+    }
+
+    75%{
+        right: -6%;
+        bottom: 80%;
+        background: violet;
+    }
+
+    100%{
+        right: -6%;
+        bottom: -15%;
+        background: grey;
+    }
+}

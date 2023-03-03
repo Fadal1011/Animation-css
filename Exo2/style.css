@@ -1,0 +1,80 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  
+.hoverable{
+    width: 40rem;
+    height: 10rem;
+    border: solid .2rem black;
+    font-size: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+   
+    
+  }
+
+
+ .hoverable::before{
+    content:"";
+    width: 200px;
+    height: 400px;
+    background: red;
+    position: absolute;
+    rotate: 0deg;
+    right: 100%;
+    bottom: 0;
+    transform-origin: bottom right;
+    transform: rotate(0);
+    transition: all 1s;
+ }
+
+ .hoverable::after{
+    content:"";
+    width: 200px;
+    height: 400px;
+    background: red;
+    position: absolute;
+    rotate: 0deg;
+    left: 100%;
+    bottom: 0;
+    transform-origin: bottom left;
+    transform: rotate(0);
+    transition: all 1s;
+ }
+
+ .hoverable:hover::before{
+    transform: rotate(90deg);
+ }
+
+ .hoverable:hover::after{
+    transform: rotate(-90deg);
+ }
+
+ 
+
+ .hoverable h1{
+    position: absolute;
+    z-index: 9999999999999999999999999999999;
+    left: 25%;
+    color: red;
+    transition: all 1s;
+ }
+
+ .hoverable:hover h1{
+    color: rgb(255, 255, 255);
+ }
+
+

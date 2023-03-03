@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+.rideau{
+    width: 40rem;
+    height: 10rem;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border: solid .2rem rgb(255, 0, 0);
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+
+.red{
+    width: 100%;
+    height: 400%;
+    background: red;
+    clip-path: inset(0 0 100% 0);
+    transition: all 1.5s;  
+}
+
+
+
+ h1{
+    position: absolute;
+ }
+
+
+.rideau:hover .red{
+    clip-path: inset(0px round 0px 0px 200px 200px);
+}

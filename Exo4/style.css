@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+.rideau{
+    width: 40rem;
+    height: 10rem;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border: solid .2rem black;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+
+.red{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: red;
+    top: -10rem;
+    transition: .7s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rideau:hover .red{
+    top: 0rem;
+}
