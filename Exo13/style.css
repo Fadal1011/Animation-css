@@ -1,0 +1,364 @@
+
+
+body{
+    overflow: hidden;
+}
+
+.course{
+width: 1200px;
+min-height: 15vh;
+margin: 5rem auto;
+background: black;
+display: flex;
+align-items: center;
+padding: 1rem 0;
+overflow: hidden;
+position: relative;
+
+}
+
+.course .dashed{
+    width: 90%;
+    border-top: dotted .6rem white;
+}
+#ghost{
+    position: absolute;
+    top: 10%;
+    animation: deplacement 6s linear infinite;
+}
+
+.course .pacman{
+    width: 50px;
+    height: 50px;
+    position: relative;
+    left: -10%;
+    animation: deplacement 6s .4s linear infinite;
+}
+
+
+.ghost{
+    width: 40px;
+    height: 40px;
+    background: red;
+    border-top-left-radius: 6rem;
+    border-top-right-radius: 6rem;
+    display: flex;
+    gap: .5rem;
+    padding: 2rem 2rem 1rem .5rem ;
+    position: relative;
+}
+
+.zigzag{
+    content: "";
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 80%;
+    height: 40px;
+    background:rgb(0, 0, 0);
+    display: flex;
+}
+
+.zigzag div{
+    width: 15px;
+    height: 100%;
+    clip-path: polygon(52% 100%, 0 0, 100% 0);
+    background: red;
+}
+
+.ghost .eyes{
+width: 20px;
+height: 30px;
+background: white;
+border-radius:50% ;
+position: relative;
+}
+
+
+ .ghost .eyes div{
+    width: .5rem;
+    height: .5rem;
+    background: black;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+
+}
+
+@keyframes deplacement {
+    from{
+        left: -10%;
+    }
+    to{
+        left: 100%;
+    }
+}
+
+
+.course .pacman > div{
+    width: 100%;
+    height: 50%;
+    background: rgb(255, 200, 0);
+    position: absolute;
+}
+
+.course .pacman .pacman-top{
+    top: 0;
+    border-radius: 25px 25px 0 0;
+    animation: spinTop linear 2s infinite;
+}
+
+
+
+@keyframes spinTop {
+    0%{
+        transform: rotate(0deg);
+    }
+
+    50%{
+        transform: rotate(-39deg);
+    }
+}
+
+
+.course .pacman .pacman-bottom{
+    bottom: 0;
+    border-radius: 0 0 25px 25px;
+    animation: spinBottom linear 2s infinite;
+}
+
+
+@keyframes spinBottom {
+    0%{
+        transform: rotate(0deg);
+    }
+
+    50%{
+        transform: rotate(39deg);
+    }
+
+}
+
+
+.ghost{
+    width: 40px;
+    height: 40px;
+    background: red;
+    border-top-left-radius: 6rem;
+    border-top-right-radius: 6rem;
+    display: flex;
+    gap: .5rem;
+    padding: 2rem 2rem 1rem .5rem ;
+    position: relative;
+}
+
+.zigzag{
+    content: "";
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 90%;
+    height: 40px;
+    background:rgb(0, 0, 0);
+    display: flex;
+}
+
+.zigzag div{
+    width: 15px;
+    height: 100%;
+    clip-path: polygon(52% 100%, 0 0, 100% 0);
+    background: red;
+}
+
+.ghost .eyes{
+width: 20px;
+height: 30px;
+background: white;
+border-radius:50% ;
+position: relative;
+}
+
+
+ .ghost .eyes div{
+    width: .5rem;
+    height: .5rem;
+    background: black;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+
+}
+
+.ghost .eyes .eyes1{
+    animation: eyes1 1s linear infinite;
+}
+
+.ghost .eyes .eyes2{
+    animation: eyes2 1s linear infinite;
+}
+
+
+
+
+@keyframes eyes1 {
+    from{
+        left: 0;
+    }
+
+    50%{
+        left: 50%;
+    }
+
+    to{
+        left: 0;
+    }
+}
+
+@keyframes eyes2 {
+    from{
+        right: 0;
+    }
+
+    50%{
+        right: 50%;
+    }
+
+    to{
+        right: 0;
+    }
+}
+
+
+
+/**********************************************************************************************************************/
+
+.emoji{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.emoji .box,.emoji .box2{
+    width: 300px;
+    height: 300px;
+    background: rgb(255, 204, 0);
+     border-radius: 50%;
+    box-shadow: inset -1px 0px 15px 20px rgb(255, 170, 0);
+    position: relative;
+}
+
+.emoji .box #eyes,.emoji .box2{
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+}
+
+.emoji .box .bouche{
+    width: 5rem;
+    height: 1rem;
+    border-radius: 2rem;
+    background: rgba(96, 48, 0, 0.845);
+    box-shadow: 0px 0px 6px 4px rgb(255, 225, 0);
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.emoji .box .eyes,.emoji .box2 .eyes{
+    width: 5rem;
+    height: 5rem;
+    background: rgb(255, 255, 255);
+    border-radius: 50%;
+    margin-top: 4rem;
+    box-shadow: inset -1px 2px 6px 3px #000000;
+    position: relative;
+   
+}
+.emoji .box .eyes{
+animation: rotation 2s linear infinite;
+}
+
+.emoji .box2 .close{
+    width: 6rem;
+    height: 3rem;
+    border: 15px solid rgba(96, 48, 0, 0.845);
+    border-bottom: transparent;
+    border-left: transparent;
+    border-right: transparent;
+    border-radius: 50%;
+    position: relative;
+    top: 30%;
+}
+
+.emoji .box2 .bouche2{
+    width: 8rem;
+    height: 4rem;
+    border: 35px solid rgba(70, 35, 0, 0.845);
+    border-top: transparent;
+    border-left: transparent;
+    border-right: transparent;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+}
+
+.emoji .box2 .bouche2 .langue{
+    width: 5rem;
+    height: 6rem;
+    background: linear-gradient(180deg, rgba(0,1,36,1) 0%, rgba(0,0,0,1) 4%, rgb(255, 0, 68)100%);
+    position: absolute;
+    top: 100%;
+    left: 16%;
+    border-radius: 0 0 48% 48%;
+}
+.emoji .box .eyes div{
+    width: 2rem;
+    height: 2rem;
+    background: rgb(0, 0, 0);
+    border-radius: 50%;
+    position: absolute;
+    top: 5%;
+    left: 30%;
+   
+}
+
+.emoji .box2 .eyes .point{
+    width: 2rem;
+    height: 2rem;
+    background: rgb(0, 0, 0);
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+
+@keyframes rotation {
+    0%{
+       transform: rotate(0deg);
+    }
+
+    100%{
+        transform: rotate(360deg);
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
