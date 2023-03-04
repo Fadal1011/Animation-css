@@ -28,11 +28,11 @@ position: relative;
 }
 
 .course .pacman{
-    width: 50px;
-    height: 50px;
+    width: 100px;
+    height: 100px;
     position: relative;
     left: -10%;
-    animation: deplacement 6s .4s linear infinite;
+    animation: deplacement 6s .7s linear infinite;
 }
 
 
@@ -104,8 +104,8 @@ position: relative;
 
 .course .pacman .pacman-top{
     top: 0;
-    border-radius: 25px 25px 0 0;
-    animation: spinTop linear 2s infinite;
+    border-radius: 50px 50px 0 0;
+    animation: spinTop linear .5s infinite;
 }
 
 
@@ -123,8 +123,8 @@ position: relative;
 
 .course .pacman .pacman-bottom{
     bottom: 0;
-    border-radius: 0 0 25px 25px;
-    animation: spinBottom linear 2s infinite;
+    border-radius: 0 0 50px 50px;
+    animation: spinBottom linear .5s infinite;
 }
 
 
@@ -238,7 +238,7 @@ position: relative;
     justify-content: space-evenly;
 }
 
-.emoji .box,.emoji .box2{
+.emoji .box,.emoji .box2,.emoji .box3{
     width: 300px;
     height: 300px;
     background: rgb(255, 204, 0);
@@ -271,7 +271,7 @@ position: relative;
     background: rgb(255, 255, 255);
     border-radius: 50%;
     margin-top: 4rem;
-    box-shadow: inset -1px 2px 6px 3px #000000;
+    box-shadow: inset -1px 2px 6px 3px #000000b8;
     position: relative;
    
 }
@@ -301,16 +301,51 @@ animation: rotation 2s linear infinite;
     border-radius: 50%;
     position: absolute;
     top: 50%;
+    
 }
 
 .emoji .box2 .bouche2 .langue{
     width: 5rem;
-    height: 6rem;
-    background: linear-gradient(180deg, rgba(0,1,36,1) 0%, rgba(0,0,0,1) 4%, rgb(255, 0, 68)100%);
+    height: 5rem;
+    border: 100px solid rgb(188, 0, 94);
+    border-top: transparent;
+    border-left: transparent;
+    border-right: transparent;
+    border-radius: 100%;
+    position: absolute;
+    top: -20%;
+    left: 16%;
+    /* background: linear-gradient(180deg, rgba(0,1,36,1) 0%, rgba(0,0,0,1) 4%, rgb(255, 0, 68)100%);
     position: absolute;
     top: 100%;
     left: 16%;
-    border-radius: 0 0 48% 48%;
+    border-radius: 0 0 48% 48%; */
+}
+
+
+
+.emoji .box2 .bouche2 .langue::before{
+    content: "";
+    width: .1rem;
+    height: 3rem;
+    background: linear-gradient(rgba(70, 35, 0, 0.845),rgb(188, 0, 94));
+    position: absolute;
+    top: 100%;
+    left: 50%;
+}
+.emoji .box2 .bouche2 .langue::after{
+    content: "";
+    width: 3rem;
+    height: 3rem;
+    /* background: rgba(255, 255, 255, 0.823); */
+    border: 50px solid rgba(255, 210, 232, 0.177);
+    border-top: transparent;
+    border-left: transparent;
+    border-right: transparent;
+    position: absolute;
+    border-radius: 50%;
+    top: 80%;
+    left: 20%;
 }
 .emoji .box .eyes div{
     width: 2rem;
@@ -333,6 +368,41 @@ animation: rotation 2s linear infinite;
     top: 50%;
     transform: translate(-50%,-50%);
 }
+
+
+.emoji .box3 #eyes2{
+display: flex;
+justify-content: space-evenly;
+position: relative;
+top: 20%;
+
+
+
+}
+
+.emoji .box3 #eyes2 .eyes{
+width: 3rem;
+height: 4rem;
+background: rgb(124, 99, 0);
+box-shadow: inset 1px 4px 11px 5px #6f3800;
+border-radius: 50%;
+}
+
+.emoji .box3 .bouche{
+    width:10rem;
+    height: 6rem;
+    border: solid 12px #6f3800 ;
+    border-bottom: transparent;
+    border-left: transparent;
+    border-right: transparent;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    top: 80%;
+    transform: translate(-50%,-50%);
+}
+
+
 
 
 @keyframes rotation {
