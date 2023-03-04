@@ -141,8 +141,8 @@ position: relative;
 
 
 .ghost{
-    width: 40px;
-    height: 40px;
+    width: 45px;
+    height: 60px;
     background: red;
     border-top-left-radius: 6rem;
     border-top-right-radius: 6rem;
@@ -150,6 +150,7 @@ position: relative;
     gap: .5rem;
     padding: 2rem 2rem 1rem .5rem ;
     position: relative;
+    animation: ghost_color 1s linear infinite;
 }
 
 .zigzag{
@@ -157,17 +158,19 @@ position: relative;
     position: absolute;
     right: 0;
     left: 0;
-    top: 90%;
-    height: 40px;
+    top: 80%;
+    height: 30px;
     background:rgb(0, 0, 0);
     display: flex;
+    
 }
 
 .zigzag div{
-    width: 15px;
+    width: 30px;
     height: 100%;
     clip-path: polygon(52% 100%, 0 0, 100% 0);
     background: red;
+    animation: ghost_color 1s linear infinite;
 }
 
 .ghost .eyes{
@@ -190,11 +193,13 @@ position: relative;
 }
 
 .ghost .eyes .eyes1{
+    background: blue;
     animation: eyes1 1s linear infinite;
 }
 
 .ghost .eyes .eyes2{
-    animation: eyes2 1s linear infinite;
+    background: red;
+    animation: eyes2 1.2s linear infinite;
 }
 
 
@@ -414,6 +419,27 @@ border-radius: 50%;
         transform: rotate(360deg);
     }
 
+}
+
+@keyframes ghost_color {
+    0%{
+        background: purple;
+    }
+    25%{
+        background: rgb(0, 47, 128);
+    }
+
+    50%{
+        background: rgb(71, 0, 104);
+    }
+
+    75%{
+        background: rgb(192, 0, 0);
+    }
+
+    100%{
+        background: purple;
+    }
 }
 
 
